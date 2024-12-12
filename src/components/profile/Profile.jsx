@@ -189,7 +189,7 @@ function Profile() {
             Submit Selected Tasks
           </button>
 
-          <div className="flex items-center mt-4 space-x-2">
+          <div className="flex items-center mt-4 space-x-1 flex-wrap gap-2">
             <input
               type="text"
               placeholder="Add new task"

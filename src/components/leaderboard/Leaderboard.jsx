@@ -1,5 +1,7 @@
 "use client";
-// Dummy leaderboard data
+
+import React, { useState } from "react";
+
 const leaderboardData = [
   {
     id: 1,
@@ -38,8 +40,6 @@ const leaderboardData = [
   },
 ];
 
-import React, { useState } from "react";
-
 function Leaderboard() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortedBy, setSortedBy] = useState("saharaPoints");
@@ -70,24 +70,24 @@ function Leaderboard() {
       <div className="mt-4 flex justify-center space-x-4">
         <button
           onClick={() => setSortedBy("saharaPoints")}
-          className={`p-2 text-white rounded-md shadow-md ${
-            sortedBy === "saharaPoints" ? "bg-yellow-800" : "bg-amber-600"
+          className={`p-2 text-black rounded-md shadow-md ${
+            sortedBy === "saharaPoints" ? "bg-yellow-200" : "bg-amber-100"
           }`}
         >
           Sahara Points
         </button>
         <button
           onClick={() => setSortedBy("streaks")}
-          className={`p-2 text-white rounded-md shadow-md ${
-            sortedBy === "streaks" ? "bg-yellow-800" : "bg-amber-600"
+          className={`p-2 text-black rounded-md shadow-md ${
+            sortedBy === "saharaPoints" ? "bg-yellow-200" : "bg-amber-100"
           }`}
         >
           Streaks
         </button>
         <button
           onClick={() => setSortedBy("tasksCompleted")}
-          className={`p-2 text-white rounded-md shadow-md ${
-            sortedBy === "tasksCompleted" ? "bg-yellow-800" : "bg-amber-600"
+          className={`p-2 text-black rounded-md shadow-md ${
+            sortedBy === "saharaPoints" ? "bg-yellow-200" : "bg-amber-100"
           }`}
         >
           Tasks Completed
