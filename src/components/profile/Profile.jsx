@@ -149,9 +149,9 @@ function Profile() {
           <p className="text-sm text-gray-600 mt-1">
             One step at a time. Keep moving forward!
           </p>
-          <div className="relative mt-2 h-2 bg-yellow-300 rounded-full">
+          <div className="relative mt-2 h-2 bg-white rounded-full">
             <div
-              className="absolute top-0 left-0 h-full bg-yellow-500 rounded-full"
+              className="absolute top-0 left-0 h-full bg-yellow-300 rounded-full"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
