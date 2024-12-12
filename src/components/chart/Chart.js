@@ -66,7 +66,7 @@ function WeeklyProgress() {
   };
 
   return (
-    <div className="bg-yellow-100 p-4 rounded-md shadow-md">
+    <div className="bg-white p-4 rounded-md shadow-md">
       <h3 className="text-lg font-semibold">Weekly Progress</h3>
 
       <div className="mt-4">

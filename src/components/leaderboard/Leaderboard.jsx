@@ -44,7 +44,6 @@ function Leaderboard() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortedBy, setSortedBy] = useState("saharaPoints");
 
-  // Filter and sort leaderboard data
   const filteredData = leaderboardData
     .filter((user) =>
       user.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -52,8 +51,10 @@ function Leaderboard() {
     .sort((a, b) => b[sortedBy] - a[sortedBy]);
 
   return (
-    <div className="max-w-lg mx-auto p-4 background rounded-md shadow-md font-sans">
-      <h1 className="text-2xl font-bold text-center text-white">Leaderboard</h1>
+    <div className="max-w-lg mx-auto p-4  rounded-md shadow-md font-sans">
+      <h1 className="text-2xl font-bold text-center text-amber-500">
+        Leaderboard
+      </h1>
 
       {/* Search Bar */}
       <div className="mt-4 flex items-center space-x-2">
@@ -66,28 +67,27 @@ function Leaderboard() {
         />
       </div>
 
-      {/* Sorting Options */}
       <div className="mt-4 flex justify-center space-x-4">
         <button
           onClick={() => setSortedBy("saharaPoints")}
-          className={`p-2 text-black rounded-md shadow-md ${
-            sortedBy === "saharaPoints" ? "bg-yellow-200" : "bg-amber-100"
+          className={`p-2 text-white rounded-md shadow-md font-bold ${
+            sortedBy === "saharaPoints" ? "bg-yellow-600" : "background"
           }`}
         >
           Sahara Points
         </button>
         <button
           onClick={() => setSortedBy("streaks")}
-          className={`p-2 text-black rounded-md shadow-md ${
-            sortedBy === "saharaPoints" ? "bg-yellow-200" : "bg-amber-100"
+          className={`p-2 text-white rounded-md shadow-md font-bold ${
+            sortedBy === "streaks" ? "bg-yellow-600" : "background"
           }`}
         >
           Streaks
         </button>
         <button
           onClick={() => setSortedBy("tasksCompleted")}
-          className={`p-2 text-black rounded-md shadow-md ${
-            sortedBy === "saharaPoints" ? "bg-yellow-200" : "bg-amber-100"
+          className={`p-2 text-white rounded-md shadow-md font-bold ${
+            sortedBy === "tasksCompleted" ? "bg-yellow-700" : "background"
           }`}
         >
           Tasks Completed
@@ -99,7 +99,7 @@ function Leaderboard() {
         {filteredData.map((user, index) => (
           <li
             key={user.id}
-            className="flex justify-between items-center bg-white p-4 rounded-md shadow-lg hover:bg-yellow-100"
+            className="flex justify-between items-center background p-4 rounded-md shadow-lg hover:bg-yellow-100"
           >
             <div>
               <h2 className="text-lg font-semibold text-gray-800">
@@ -122,10 +122,8 @@ function Leaderboard() {
       </ul>
 
       {/* Personal Highlight */}
-      <section className="mt-8 p-4 bg-yellow-100 rounded-md shadow-md">
-        <h3 className="text-lg font-bold text-center text-yellow-700">
-          Your Rank
-        </h3>
+      <section className="mt-8 p-4 background rounded-md shadow-md">
+        <h3 className="text-lg font-bold text-center text-black">Your Rank</h3>
         <div className="flex justify-between items-center mt-2">
           <p className="text-gray-700">Rank: 1</p>
           <p className="text-gray-700">Points: 250</p>
@@ -134,8 +132,8 @@ function Leaderboard() {
       </section>
 
       {/* Milestones or Achievements */}
-      <section className="mt-6 p-4 bg-yellow-200 rounded-md shadow-md">
-        <h3 className="text-lg font-bold text-center text-yellow-800">
+      <section className="mt-6 p-4 background rounded-md shadow-md">
+        <h3 className="text-lg font-bold text-center text-black">
           Achievements
         </h3>
         <ul className="mt-2 space-y-2">

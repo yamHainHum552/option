@@ -101,7 +101,7 @@ function Profile() {
 
   return (
     <div className="max-w-md mx-auto p-4 font-sans">
-      <header className="flex justify-between items-center bg-yellow-200 p-4 rounded-md shadow-md relative">
+      <header className="flex justify-between items-center background p-4 rounded-md shadow-md relative">
         <button
           className="absolute right-0 top-2 "
           onClick={() => router.push("/leaderboard")}
@@ -118,7 +118,7 @@ function Profile() {
               🔥
             </span>
             Streaks:{" "}
-            <span className="font-bold text-amber-500 ml-1">
+            <span className="font-bold text-black ml-1">
               {userProfile.streaks} days
             </span>
           </h3>
@@ -128,7 +128,7 @@ function Profile() {
 
           <h3 className="text-lg font-semibold mt-2">
             Sahara Points:{" "}
-            <span className="font-bold text-green-500">{saharaPoints}</span>
+            <span className="font-bold text-black">{saharaPoints}</span>
           </h3>
         </div>
 
@@ -144,7 +144,7 @@ function Profile() {
       </header>
 
       <main className="mt-4 space-y-4">
-        <section className="bg-yellow-100 p-4 rounded-md shadow-md">
+        <section className="background p-4 rounded-md shadow-md">
           <h3 className="text-lg font-semibold">Task Targets</h3>
           <p className="text-sm text-gray-600 mt-1">
             One step at a time. Keep moving forward!
@@ -158,7 +158,7 @@ function Profile() {
           <p className="text-sm mt-1">{progress}% completed</p>
         </section>
 
-        <section className="bg-yellow-100 p-4 rounded-md shadow-md">
+        <section className="background p-4 rounded-md shadow-md">
           <h3 className="text-lg font-semibold">Task Priority</h3>
           <ul className="mt-4 space-y-2">
             {priorityTasks.map((task) => (
@@ -184,7 +184,7 @@ function Profile() {
           </ul>
           <button
             onClick={handleSubmitSelectedTasks}
-            className="p-2 mt-4 bg-amber-500 text-white rounded-md"
+            className="p-2 mt-4 bg-amber-600 text-white rounded-md"
           >
             Submit Selected Tasks
           </button>
@@ -199,7 +199,7 @@ function Profile() {
             />
             <button
               onClick={handleAddTask}
-              className="p-2 bg-yellow-400 text-white rounded-md"
+              className="p-2 bg-amber-600 text-white rounded-md"
             >
               Add
             </button>
