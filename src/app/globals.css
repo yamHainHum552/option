@@ -6,8 +6,8 @@
   .background {
     background-image: linear-gradient(
       135deg,
-      rgba(255, 173, 96, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
+      rgba(255, 173, 96, 0.3) 0%,
+      rgba(253, 187, 45, 0.7) 100%
     );
     background-size: cover;
     background-attachment: fixed;
